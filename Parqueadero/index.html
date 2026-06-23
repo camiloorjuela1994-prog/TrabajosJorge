@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Control de Parqueadero</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="contenedor">
+        <h1>Sistema de Parqueadero & Control</h1>
+
+        <form id="formulario">
+
+            <label>Tipo de Vehículo</label>
+            <select id="tipo">
+                <option value="">Seleccione</option>
+                <option value="Automovil">Automóvil</option>
+                <option value="Moto">Moto</option>
+            </select>
+
+            <label>Placa</label>
+            <input type="text" id="placa">
+
+            <label>Fecha y Hora de Ingreso</label>
+            <input type="datetime-local" id="ingreso">
+
+            <label>Fecha y Hora de Salida</label>
+            <input type="datetime-local" id="salida">
+
+            <label>Dinero Entregado</label>
+            <input type="number" id="pago">
+
+            <button type="button" onclick="calcular()">Calcular</button>
+
+        </form>
+
+        <div id="resultado"></div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

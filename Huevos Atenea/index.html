@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./estilo.css">
+  <title>Ejercicios con el DOM</title>
+</head>
+
+<body>
+  <main class="contenedor">
+    <article class="titulo">DISTRIBUIDORA DE HUEVOS</article>
+    <div class="proyecto">
+    <form>
+      <fieldset>
+        <legend>Datos del Cliente</legend>
+        <label for="cliente" class="label">Nombre del Cliente</label><br>
+        <input type="text" class="input" id="cliente" name="cliente" /><br />
+        <label class="label" for="tel">Telefono cliente</label><br>
+        <input class="input" type="tel" id="tel" name="tel" /><br />
+        <label class="label" for="email">Email cliente</label><br>
+        <input class="input" type="email" id="email" name="email" placeholder="xxx@gmail.com" /><br />
+        <input type="checkbox" name="frec" id="frec" value="frecuente" />Cliente Frecuente<br /><br>
+      </fieldset>
+      <fieldset>
+        <legend>Cantidad de huevos</legend>
+        <h3>TIPO A</h3>
+        <label for="cantA">Cantidad (entre 0 y 100):</label>
+        <input type="number" id="cantA" name="cantA" min="0" max="100" value="0">
+        <h3>TIPO AA</h3>
+        <label for="cantAA">Cantidad (entre 0 y 100):</label>
+        <input type="number" id="cantAA" name="cantAA" min="0" max="100" value="0">
+        <h3>TIPO AAA</h3>
+        <label for="cantAAA">Cantidad (entre 0 y 100):</label>
+        <input type="number" id="cantAAA" name="cantAAA" min="0" max="100" value="0">
+      </fieldset>
+      <fieldset>
+        <legend>Día de compra</legend>
+        <select id="dia" name="Seleccione día">
+          <option value="1">Lunes a Viernes</option>
+          <option value="2">Sábado</option>
+          <option value="3">Domingo</option>
+        </select>
+      </fieldset><br><br>
+      <button type="button" onclick="recogerDatos()">Enviar</button>
+    </form> 
+    <section class="contenedor" id="errores"></section>
+    <section class="contenedor" id="resultados"></section>
+  </div>
+  </main>
+
+  <script src="./codigo.js"></script>
+</body>
+
+</html>

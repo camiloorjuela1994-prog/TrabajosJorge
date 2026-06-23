@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista de Tareas</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+  <link rel="stylesheet" href="./tareas.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <img src="./xboxlogo.jpg" alt="Logo" class="logo">
+  <h1>Lista de juegos adquiridos</h1>
+
+  <form action="#" id="usuario">
+    <input type="text" id="inputTarea" placeholder="Escriba el juego ..." autofocus>
+    <input type="submit" value="+" id="agregar">
+  </form>
+
+  <section class="lista" id="contLista">
+    <!-- <article class="tareas" id="1">
+      <label>
+        <input type="checkbox">
+        Tarea 1
+      </label>
+      <i class="fa-solid fa-trash borrar"></i>
+    </article> -->
+  </section>
+
+  <section id="estadistica">
+    Juegos no adquiridos: 0 Juegos comprados: 0
+  </section>
+
+  <script src="./tareas.js"></script>
+</body>
+</html>

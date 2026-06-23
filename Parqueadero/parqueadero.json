@@ -1,0 +1,16 @@
+[
+  {
+    "fecha": "20/06/2026",
+    "tipoVehiculo": "Automovil",
+    "placa": "ABC123",
+    "tiempoHoras": 2.5,
+    "valorPagar": 18750
+  },
+  {
+    "fecha": "20/06/2026",
+    "tipoVehiculo": "Moto",
+    "placa": "XYZ456",
+    "tiempoHoras": 1.2,
+    "valorPagar": 6850
+  }
+]

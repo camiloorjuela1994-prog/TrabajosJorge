@@ -1,0 +1,55 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.contenedor {
+    max-width: 500px;
+    width: 100%;
+    padding: 25px 30px;
+    background-color: green;
+    border-radius: 10px;
+}
+
+.titulo{
+    font-size: 25px;
+    font-weight: 500;
+    text-align: center;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.input {
+    width: 300px;
+    height: 30px;
+    background-color: white;
+}
+
+#frec {
+    width: 20px;
+    height: 20px;
+}
+
+fieldset {
+    width: 80%;
+    border: 4px solid black;
+    border-radius: 10px;
+    background: green;
+}
+
+legend {
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+label, select, button {
+    font-size: 20px;
+}.proyecto{
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    height: 40;
+    width: 40;
+    margin: 0;
+}

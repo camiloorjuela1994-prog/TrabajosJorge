@@ -1,0 +1,268 @@
+/EJERCICIO1:
+// let unidad, cantidad, mi, km, mt;
+// unidad = parseInt(prompt('Digite 1 para Millas - 2 para Kilometros - 3 para Metros'));
+// cantidad = prompt('Digite el valor a convertir');
+// switch(unidad){
+//     case 1:
+//          km = cantidad * 1.6093;
+//          mt = cantidad + 1609.34;
+//          document.write(cantidad + ' Millas, equivalen a'+ km + 'Kilometros, y a'+ mt + 'Metros');
+//          break;
+//     case 2: 
+//          mi = cantidad + 0.621371;
+//          mt = cantidad * 1000;
+//          document.write(cantidad + ' kilometros, equivalen a' + mi + 'Millas, y a '+ mt + 'Metros' );
+//          break;
+    
+//     case 3:
+//          mi = cantidad * 0.000621371;
+//          km = cantidad / 1000;
+//          document.write(cantidad + ' Metros, equivalen a' + mi + 'Millas, y a '+ km + 'Kilometros' );
+//          break;
+        
+//     default:
+//         document.write('Valor Incorrecto');
+//         break;
+// }   
+//EJERCICIO2:
+/*let d1,d2,d3,d4,d5,d6,num,coc
+num=parseInt(prompt("ingrese un numero de 6 cifras: "))
+d6=num%10
+coc=Math.trunc(num/10)
+d5=coc%10
+coc=Math.trunc(coc/10)
+d4=coc%10
+coc=Math.trunc(coc/10)
+d3=coc%10
+coc=Math.trunc(coc/10)
+d2=coc%10
+coc=Math.trunc(coc/10)
+d1=coc%10
+coc=Math.trunc(coc/10)
+document.write("la suma es: " + (d4+d3))
+document.write("\nla multiplicacion es " + (d1*d6))
+document.write("\nla resta es:" + (d2-d5))*/
+///EJERCICIO3 :
+/*let hora= parseInt(prompt("ingrese una hora (0/23):"))
+let minutos= parseInt(prompt("ingrese un minuto (0/59):"))
+let segundos= parseInt(prompt("ingrese un segundo (0/59):"))
+segundos++
+if(segundos === 60) { 
+    segundos = 0//
+    minutos++
+}
+if(minutos === 60) {
+    minutos = 0
+    hora++
+}
+if(hora === 24) {
+    hora = 0
+}
+hora = String(hora).padStart(2, "0")
+minutos = String(minutos).padStart(2, "0")
+segundos = String(segundos).padStart(2, "0")
+document.write(hora + ":" + minutos + ":" + segundos)*/
+////EJERCICIO4 :
+/*let a = parseInt(prompt("ingrese un numero + o - : "))
+let b = parseInt(prompt("ingrese un numero + o - : "))
+let c = parseInt(prompt("ingrese un numero + o - : "))
+let discriminante = ((b) ** 2 - (4 * a * c))
+console.log(discriminante)
+if (discriminante === 0) {
+    let cero = (-b)/(2*a)
+    document.write("solo existe una solucion real, que es " + cero)
+}else if(discriminante>0) {
+    let solucion_1 = (-b + Math.sqrt(discriminante))/(2 * a)//el (Math.sqrt)es la funcion para calcular la raiz cuadrada
+    let solucion_2 = (-b - Math.sqrt(discriminante))/(2 * a)
+    document.write("hay dos soluciones reales: la solucion 1 es " + solucion_1 +  " y la solucion 2 es " + solucion_2)
+}else{
+    document.write("existen dos soluciones imaginarias.")
+    let real = (-b /(2 * a))
+    let imaginaria = (Math.sqrt(- discriminante)/ (2 * a))
+    document.write("solucion 1: " + real + "+" + imaginaria + "i" + " y la solucion 2: " + real + "-" + imaginaria + "i")//en este caso la "i" significa q es un numero imaginario 
+}*/
+///// EJERCICIO 5: Contador de temperaturas (Optimizado sin bucle infinito)
+// ==========================================
+let pos = 0, neg = 0, cero = 0, tem;
+while (true) {
+    tem = parseInt(prompt("Ingrese una temperatura (99 para terminar):"));
+    if (tem === 99) {
+        break; // Rompe inmediatamente
+    } else if (tem > 0) {
+        pos++;
+    } else if (tem < 0) {
+        neg++;
+    } else {
+        cero++;
+    }
+}
+document.write("Temperaturas mayores a 0: " + pos + "<br>");
+document.write("Temperaturas iguales a 0: " + cero + "<br>");
+document.write("Temperaturas menores a 0: " + neg + "<br>");
+//////EJERCICIO6 :
+let radar, rd1, rd2, rd3, rd4, res;
+radar = parseInt(prompt("Ingrese número de radar (4 cifras): "));
+d4=radar%10
+res=Math.trunc(radar/10)
+d3=res%10
+res=Math.trunc(res/10)
+d2=res%10
+res=Math.trunc(res/10)
+d1=res%10
+res=Math.trunc(res/10)
+if(d1%2 !='0'){
+    document.write("No hay ninguna nave en el aire, se aproxima "); 
+} else {
+    document.write("Hay una nave en el aire, se aproxima ");
+}
+
+switch(rd2) {
+    case 0: document.write("dirigible "); break;
+    case 1: document.write("militar "); break;
+    case 2: document.write("avión civil de carga "); break;
+    case 3: document.write("avión civil de pasajeros "); break;
+    case 4: document.write("nave sin permiso "); break;
+    case 5: document.write("nave de supertransporte "); break;
+    case 6: document.write("nave enemiga "); break;
+    case 7: document.write("avión mixto "); break;
+    case 8: document.write("helicóptero "); break;
+    case 9: document.write("globo aerostático "); break;
+}
+document.write(" en una distancia de:  "+ d3 + " km ")
+if(d4==0 || d4==1){
+    document.write("al norte")
+}else if(d4==2 ||d4==3){
+    document.write("al sur")
+}else if(d4==4||d4==5){
+    document.write("al oriente")
+}else if(d4==6 ||d4==7){
+    document.write("al occidente")
+}else if(d4==8 ||d4==9){
+    document.write("desconocido")
+}else{
+    document.write("su valor no conside.")    
+}*/
+///////EJERCICIO7 :
+let can1, can2, can3, can_total, precio_total;
+let frec, dia;
+let precioA = 600, precioAA = 700, precioAAA = 750;
+
+do { can1 = parseInt(prompt("Cantidad de huevos tipo A:")); } while(can1 < 0);
+do { can2 = parseInt(prompt("Cantidad de huevos tipo AA:")); } while(can2 < 0);
+do { can3 = parseInt(prompt("Cantidad de huevos tipo AAA:")); } while(can3 < 0);
+do { frec = parseInt(prompt("Si es cliente frecuente digite 1, si no 0:")); } while(frec !== 1 && frec !== 0);
+do { dia = parseInt(prompt("Digite 1 (L-V), 2 (Sábado), 3 (Domingo):")); } while(dia < 1 || dia > 3);
+
+can_total = can1 + can2 + can3;
+precio_total = (can1 * precioA) + (can2 * precioAA) + (can3 * precioAAA);
+
+// Calculamos los porcentajes de descuento/aumento de forma independiente para evitar repetir código
+let p_desc = 0;
+let p_aum = 0;
+
+if (frec === 1) {
+    if (dia === 1) { p_desc = 0.125; p_aum = 0.05; }
+    else if (dia === 2) { p_desc = 0.175; }
+    else if (dia === 3) { p_desc = 0.125; }
+} else {
+    if (dia === 1) { p_desc = 0.10; p_aum = 0.05; }
+    else if (dia === 2) { p_desc = 0.15; }
+    else if (dia === 3) { p_desc = 0.10; }
+}
+let descuento = precio_total * p_desc;
+let aumento = precio_total * p_aum;
+let precio_final = precio_total - descuento + aumento;
+document.write(`Por la compra de sus ${can_total} huevos: <br>
+    - Descuento aplicado: ${(p_desc * 100)}%<br>
+    - Aumento aplicado: ${(p_aum * 100)}%<br>
+    - <strong>Precio Total Final: $${precio_final}</strong><br>`);
+////////EJERCICIO8 :
+let x_val = parseInt(prompt("Ingrese un número en x: "));
+let n_val = parseInt(prompt("Ingrese un número en n: "));
+let suma_serie = 0;
+
+for (let i = 2; i <= n_val; i += 2) {
+    suma_serie += (x_val ** i) / i;
+}
+document.write("La suma de la serie es: " + suma_serie + "<br>");
+/////////EJERCICIO9 :
+let ajedrez = 0, atletismo = 0, futbol = 0, gimnasia = 0, natacion = 0;
+let personas;
+let totalPersonas = 5; // Cambiar a 400 en producción, dejamos 5 para que puedas probarlo sin volverte loco
+
+for (let i = 1; i <= totalPersonas; i++) {
+    do {
+        personas = parseInt(prompt("INGRESE EL DEPORTE DE LA PERSONA " + i + ":\n1. Ajedrez\n2. Atletismo\n3. Fútbol\n4. Gimnasia\n5. Natación"));
+        if (personas < 1 || personas > 5) alert("Opción inválida.");
+    } while(personas < 1 || personas > 5);
+
+    if (personas === 1) ajedrez++;
+    else if (personas === 2) atletismo++;
+    else if (personas === 3) futbol++;
+    else if (personas === 4) gimnasia++;
+    else if (personas === 5) natacion++;
+}
+document.write(`Deportistas clasificados:<br>Ajedrez: ${ajedrez}<br>Atletismo: ${atletismo}<br>Fútbol: ${futbol}<br>Gimnasia: ${gimnasia}<br>Natación: ${natacion}<br>`);
+
+//////////EJERCICIO 10:
+let contraseña_correcta = 1234;
+let contraseña;
+let intentos = 0;
+let accesoConcedido = false;
+while (intentos < 3) {
+    contraseña = parseInt(prompt("Ingrese contraseña:"));
+    if (contraseña === contraseña_correcta) {
+        document.write("Acceso concedido.<br>");
+        accesoConcedido = true;
+        break; // Detiene el bucle si la contraseña es correcta
+    } else {
+        intentos++;
+        if (intentos < 3) alert("Acceso denegado, inténtelo de nuevo.");
+    }
+}
+if (!accesoConcedido && intentos === 3) {
+    alert("Alerta, INTRUSO");
+    document.write("Alerta, INTRUSO.<br>");
+}
+///////////EJERCICIO11 :
+let cantidad=0
+let pares=parseInt(prompt("ingrese un numero:"))
+while(pares%2 == 0){
+    cantidad++
+    pares=parseInt(prompt("ingrese otro numero:"))
+}
+////////////EJERCICIO 12:
+/*let dias = ["Lunes","Martes","Miércoles","Jueves","Viernes","Sábado","Domingo"]
+let num = parseInt(prompt("Ingrese un número del 1-7:"))
+if (num >= 1 && num <= 7) {
+    document.write("El día es: " + dias[num - 1])
+} else {
+    document.write("Error: debe ingresar un número entre 1-7.")
+}*/
+/////////////EJERCICIO 13:
+let num_array = [10, 5, 8, 3, 4];
+let suma_total = 0;
+for (let i = 0; i < num_array.length; i++) {
+    suma_total += num_array[i];
+}
+document.write("La suma del array fijo es: " + suma_total + "<br>");
+//////////////EJERCICIO 14:
+let numeros = []
+let pares = 0
+let impares = 0
+while (true) {
+    let num = parseInt(prompt("Ingrese un número (0 para terminar):"))
+    if (num == 0) {
+        break
+    }
+    numeros.push(num)//para agg al final de la lista
+    if (num % 2 == 0) {
+        pares++
+    } else {
+        impares++
+    }
+}
+document.write("Números ingresados:<br>"+
+    numeros.join(", ")/.join para separar los numeros de la lista pro un (,)/+
+    "<br><br> Cantidad de números pares: "+pares+
+    "<br>Cantidad de números impares: " + impares)

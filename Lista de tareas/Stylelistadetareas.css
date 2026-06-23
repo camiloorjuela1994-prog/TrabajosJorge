@@ -1,0 +1,100 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    
+    line-height: 1.5;
+    background-color: black;
+    color: white;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+}
+
+.container {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(5, 66, 5);
+    padding: 30px;
+}
+
+.search {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+form {
+    display: flex;
+}
+
+input {
+    padding: 15px 10px;
+    outline: none;
+    width: 400px;
+}
+
+.li-container {
+    background-color: white;
+    width: 100%;
+    color: white;
+    margin-top: 20px;
+}
+
+ul {
+    padding: 0;
+}
+
+li {
+    list-style: none;
+    background-color: green;
+    margin-top: 15px;
+    display: flex;
+}
+
+li p {
+    margin: 0;
+    padding: 15px;
+    width: 100%;
+}
+
+.btn-delete {
+    margin-left: auto;
+    border: none;
+    background-color: black;
+    color: darkgreen;
+    font-weight: bold;
+    padding: 5px 10px;
+    outline: none;
+    width: 10%;
+    font-size: 1.2em;
+}
+
+.btn-delete:hover {
+    cursor: pointer;
+    background-color: green;
+}
+
+.btn-add {
+    padding: 5px 15px;
+    border: none;
+    color: darkgreen;
+    font-family: fantasy;
+    background-color: black;
+    font-size: 1.4rem;
+    outline: none;
+}
+
+.btn-add:hover {
+    cursor: pointer;
+    background-color: green;
+}
+
+.empty {
+    color: white;
+}
